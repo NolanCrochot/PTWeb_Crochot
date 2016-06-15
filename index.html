@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Site CV - Nolan Crochot</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+	<link rel="stylesheet" href="./styles/grid-format.css">
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+	<!----------------------------->
+	<!--       NAVIGATION        -->
+	<!----------------------------->
+	
+	<nav class="navbar fixed-navbar">
+    <div class="wrapper wrapper-navbar">
+        <div class="row">
+            <div class="navbar-logo">
+                <img/><span class="">NC</span>
+            </div>
+            <ul>
+                <li><a href="#identite" class="actual-section">Identité</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+	</nav>
+	
+	<!----------------------------->
+	<!--         HEADER          -->
+	<!----------------------------->
+	
+	<header>
+    <div class="wrapper wrapper-header">
+        <div class="row">
+           <div class="center-vertical">
+                <div class="col3 description">
+                    <h1>Nolan Crochot</h1>
+                    <div class="localisation">
+                        <img src="images/icon_localisation.png">
+                        <h2 class="city">Haguenau - <span class="region">Alsace</span></h2>
+                    </div>
+                    <div class="transition-ligne">
+                        <hr />
+                        <hr />
+                    </div>
+                    <div class="situation">
+                        <span>EN STAGE (Juillet)</span>
+                    </div>
+                    <div class="situation-details">
+                        <h2>1ère année de DUT MMI</h2>
+                        <span class="institution">Institut universitaire d'Haguenau</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col3 photo sm-screen-hidden">
+                <img src="./images/silouhette.png" />
+            </div>
+        </div>
+    </div>  		
+	</header>
+	
+	<!----------------------------->
+	<!--         CONTENU         -->
+	<!----------------------------->
+	
+	<main>
+
+    <!----------------------------->
+    <!--        Identité         -->
+    <!----------------------------->
+    <div class="section identite">
+        <div class="wrapper wrapper-identite">
+            <div class="row section-title">
+                <h2>Identité</h2>
+                <hr />
+                <h3>Lorem ipsum integer luctus aliquam odio, eget mollis lectus.</h3>
+            </div>
+            <div class="row section-content">
+                <div class="col2 photo">
+                    <img src="./images/silouhette_small1.png"/>
+                </div>
+                <div class="col4 details">
+                    <h3>Lorem ipsum integer luctus aliquam odio.</h3>
+                    <p>Duis placerat rutrum dui, quis pharetra enim ornare eu. Integer porta felis sed quam 
+pulvinar lacinia.  In hac habitasse platea dictumst.</p>
+                   <ul class="characteristics">
+                       <li>Caractéristique n°1</li>
+                       <li>Caractéristique n°2</li>
+                       <li>Caractéristique n°3</li>
+                   </ul>
+                    <p>Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.</p>
+                   <p class="quote">Duis rhoncus, dolor ut eleifend pellentesque, neque lacus ornare !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!----------------------------->
+    <!--        Identité         -->
+    <!----------------------------->
+    <div class="section competences">
+        <div class="wrapper wrapper-competences">
+            <div class="row section-title">
+                <h2>Compétences</h2>
+                <hr />
+                <h3>Lorem ipsum integer luctus aliquam odio, eget mollis lectus.</h3>
+            </div>
+            <!-- Compétences intégration --> 
+            <div class="row section-content comp-integration">
+                <div class="comp-progressbar col1-5">
+                    <canvas class="progressbar" id="progressbar-int" width="190" height="190"></canvas>
+                </div>
+                <div class="col4-5">
+                    <div class="comp-container">
+                        <div class="logiciels">
+                        <img src="images/icones/icon_html.png" />
+                        <img src="images/icones/icon_css.png" />
+                        <img src="images/icones/icon_js.png" />
+                        </div>
+                        <div class="details">
+                            <h4>Intégration web (HTML / CSS / JS)</h4>
+                            <p>Maecenas fermentum sem pretium blandit pulvinar. Proin mauris leo, elementum vel augue et, elementum viverra ligula. Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.
+                            </p>
+                            <p class="quote">Maecenas fermentum sem pretium blandit pulvinar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Compétences developpement --> 
+            <div class="row section-content comp-developpement">
+                <div class="comp-progressbar col1-5">
+                    <canvas class="progressbar" id="progressbar-dev" width="190" height="190"></canvas>
+                </div>
+                <div class="col4-5">
+                    <div class="comp-container">
+                        <div class="logiciels">
+                            <img src="images/icones/icon_js.png" />
+                        </div>
+                        <div class="details">
+                            <h4>Développement web et gestion de bases  (PHP / SQL)</h4>
+                            <p>Maecenas fermentum sem pretium blandit pulvinar. Proin mauris leo, elementum vel augue et, elementum viverra ligula. Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.
+                            </p>
+                            <p class="quote">Maecenas fermentum sem pretium blandit pulvinar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Compétences developpement --> 
+            <div class="row section-content comp-graphisme">
+                <div class="comp-progressbar col1-5">
+                    <canvas class="progressbar" id="progressbar-gra" width="190" height="190"></canvas>
+                </div>
+                <div class="col4-5">
+                    <div class="comp-container">
+                        <div class="logiciels">
+                            <img src="images/icones/icon_ps.png" />
+                            <img src="images/icones/icon_ai.png" />
+                        </div>
+                        <div class="details">
+                            <h4>Infographisme et design (Photoshop / Illustrator / CSS)</h4>
+                            <p>Maecenas fermentum sem pretium blandit pulvinar. Proin mauris leo, elementum vel augue et, elementum viverra ligula. Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.
+                            </p>
+                            <p class="quote">Maecenas fermentum sem pretium blandit pulvinar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	</main>
+	
+	<!----------------------------->
+	<!--         FOOTER          -->
+	<!----------------------------->
+	
+	<footer>
+		
+	</footer>
+
+
+	<!----------------------------->
+	<!--         SCRIPTS         -->
+	<!----------------------------->
+    
+    <script src="./js/circular_progress_bar_int.js"></script>
+    <script src="./js/circular_progress_bar_dev.js"></script>	
+    <script src="./js/circular_progress_bar_gra.js"></script>	
+	<script src="./js/jquery-2.2.3.min.js"></script>
+	<script src="./js/main.js"></script>
+	
+</body>
+</html>
