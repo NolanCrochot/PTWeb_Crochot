@@ -171,7 +171,7 @@ header .photo img {
     text-align: center;
     color:  #2D2D2E;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 2.0em;
     font-weight: 700;
 }
 .section-title h3{
@@ -238,7 +238,7 @@ header .photo img {
 
 .competences {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     background-color: #F5F5F5;
     border-top: solid 1px #DADADA;
 }
@@ -322,7 +322,279 @@ header .photo img {
 }
 
 
-s
+/*--------------------*/
+/*	  Expériences	  */
+/*--------------------*/
+
+.experiences {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-color: #282828;
+    border-top: solid 1px #DADADA;
+}
+.experiences .section-title h2{
+    color:  #FFFFFF;
+}
+.experiences .section-title h3{
+    color:  #a0a0a0;
+}
+.experiences .scolarite{
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.experiences .scolarite .group-box{
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.experiences .scolarite .scolarite-box{
+    display: inline-block;
+    float: left;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    background-color: #FEFEFE;
+    border: solid 7px #E0E0E0;
+    border-radius: 50%;
+    padding: 40px 0 0 0;
+    text-align: center;
+    margin-left: calc((100% - 540px) / 2);
+    z-index: 2;
+}
+.experiences .scolarite .line {
+    display: inline-block;
+    position: absolute;
+    top: 89px;
+    width: 100%;
+    border-top: solid 7px #E0E0E0;
+    z-index: 1;
+}
+.experiences .scolarite .scolarite-box:first-child{
+    margin-left: 0;
+}
+.experiences .scolarite .scolarite-box h3 {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #2D2D2E;
+}
+.experiences .scolarite .scolarite-box h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #2D2D2E;
+}
+.experiences .scolarite .scolarite-box .institut {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #2D2D2E;
+}
+.experiences .scolarite .scolarite-box .ville {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #A0A0A0;
+}
+.experiences .professions {
+    margin-top: 50px;
+    display: inline-block;
+}
+.experiences .professions .special-row {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.experiences .professions ul li {
+    color: #FFFFFF;
+    font-size: 1.04em;
+    margin-bottom: 15px;
+}
+.experiences .professions ul li:last-child {
+    margin-bottom: 0;
+}
+.experiences .professions ul li .date {
+    color: #7CC177;
+    font-size: 1.04em;
+}
+.experiences .professions ul li:nth-child(2) .date {
+    color: #CD5A5F;
+}
+.experiences .professions ul li:nth-child(3) .date {
+    color: #FFB515;
+}
+.experiences .professions ul li .designation {
+    font-weight: 600;
+}
+.experiences .professions ul li .lieu {
+    font-weight: 300;
+}
+.experiences .professions ul li .enrichissement {
+    font-weight: 300;
+    font-size: 0.95em;
+    color: #A0A0A0;
+}
+
+/*--------------------*/
+/*	  Réalisations	  */
+/*--------------------*/
+.realisations .section-title {
+    padding-top: 60px;
+    padding-bottom: 15px;
+    background-color: #FEFEFE;
+}
+.items-portfolio-row {
+    margin-top: 15px;
+}
+.portfolio .categories-portfolio-row {
+    margin-bottom: 20px;
+}
+.portfolio .category-list {
+    list-style-type: none;
+    text-align: center;
+}
+.portfolio .category-list li {
+    display: inline-block;
+    margin-left: 50px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    font-family: 'Lato', cursive;
+    color: #738AA1;
+    font-size: 1.1em;
+    font-weight: 400;
+    transition: color 0.25s;
+}
+.portfolio .category-list li:hover {
+    color: #4BB4EA;
+}
+.portfolio .category-list .cat-selected:hover {
+    color: #F5AD12 !important;
+}
+.portfolio .category-list li:first-child {
+    margin-left: 0;
+}
+.portfolio .category-list .cat-selected {
+    color: #F5AD12;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #F5AD12;
+}
+.portfolio .portfolio-row{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1003px;
+}
+@media(max-width: 1100px){
+ .portfolio .portfolio-row {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 752px;
+    }
+}
+.portfolio .item-align{
+    display: inline-block;
+    margin: -2px -2px -2px -2px;
+    padding: 0;
+}
+.portfolio .port-item {
+    height: 250px;
+    width: 250px;
+    background-size: 100%;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: height 0.25s, width 0.25s, opacity 0.25s, visibility 0.25s;
+}
+#portitem1 {
+    background-image: url("img/item1.png");
+    background-color: gold;
+}
+#portitem2 {
+    background-color: gold;
+}
+#portitem3 {
+    background-color:darkslateblue;
+}
+#portitem4 {
+    background-color:darkseagreen; 
+}
+#portitem5 {
+    background-color:gold; 
+}
+#portitem6 {
+    background-color:darkseagreen; 
+}
+#portitem7 {
+    background-color:darkseagreen; 
+}
+#portitem8 {
+    background-color:darkslateblue; 
+}
+#portitem9 {
+}
+.portfolio .description {
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    text-align: center;
+    display: inline-block;
+    
+    margin-top: 250px;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: margin-top 0.25s, height 0.25s, opacity 0.25s, visibility 0.25s;
+    transition-delay: 0.25s;
+}
+.portfolio .description h3 {
+    margin: 70px 5px 5px 5px;
+    padding-bottom: 5px;
+    font-family: 'Lato', cursive;
+    color: #FFFFFF;
+    border-bottom: solid 1px #E0E0E0;
+    visibility: hidden;
+    opacity: 0;
+    transition: height 0.25s, opacity 0.25s, visibility 0.25s;   
+}
+.portfolio .description span {
+    padding: 5px;
+    font-family: 'Lato', cursive;
+    visibility: hidden;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: height 0.25s, opacity 0.25s, visibility 0.25s;   
+}
+.portfolio .item-hover .description {
+    margin-top: 0px;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: margin-top 0.25s, height 0.25s, opacity 0.25s, visibility 0.25s;
+}
+.portfolio .item-hover .description h3, .item-hover .description span {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s, visibility 0.25s;   
+    transition-delay: 0.25s;
+}
+.portfolio .portitem-transition {
+    height: 0 !important;
+    width: 0 !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: height 0.25s, width 0.25s, opacity 0.25s, visibility 0.25s;
+    transition-delay: 0.0s;
+}
+.portfolio .portitem-hiden{
+    display: none;
+}
+
 /*--------------------*/
 /*		 FOOTER	      */
 /*--------------------*/
