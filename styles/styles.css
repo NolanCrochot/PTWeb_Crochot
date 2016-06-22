@@ -41,7 +41,7 @@ body {
     .pa-screen-hidden {display: none;}
 }
 /*Elements invisible sur smartphone (smartphone)*/
-@media(max-width:350px){
+@media(max-width:361px){
     .sm-screen-hidden {display: none;}
 }
 
@@ -51,24 +51,32 @@ body {
 
 .navbar {
     display: inline-block;
-    padding: 10px 25px 10px 25px;
+    height: 50px;
     width: 100%;
-    background-color: #282828;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+    background: linear-gradient(rgba(40,40,40,0.9), rgba(40,40,40,0.9));
+    padding: 10px 25px 10px 25px;
+    transition: background 0.15s, height 0.25s;
+    position: fixed;
+    z-index: 100;
 }
 .navbar .navbar-logo {
-    float: left;
     display: inline-block;
+    float: left;
     color: #FFFFFF;
-    font-size: 3.0em;
+    font-size: 1.7em;
+    font-family: 'Dancing Script', cursive;
 }
 .navbar ul {    
-    float: right;
     display: inline-block;
-    margin-top: 20px;
+    float: right;
 }
 .navbar ul li {
     display: inline-block;
     text-transform: uppercase;
+    font-size: 1.0em;
+    margin-top: 5px;
+    transition: margin-top 0.25s, font-size 0.25s;
 }
 .navbar ul li>a{
     color: #FFFFFF;
@@ -76,14 +84,87 @@ body {
     font-weight: 600;
     text-decoration: none;
     margin-left: 15px;
+    transition: color 0.25s;
+}
+.navbar ul li>a:hover {
+    color: #C7C7C7;
+    transition: color 0.25s;
 }
 .navbar ul li:first-child a{ /*exception first-child*/
     margin-left: 0;
 }
-.navbar ul li>.actual-section{ /*section actuelle*/
-    color: #FFB515;
+.navbar ul li .actual-section{ /*section actuelle*/
+    color: #FFB515 !important;
     border-bottom: 2px solid #FFB115;
     padding-bottom: 3px;
+}
+.nav-top{
+    height: 75px;
+    background-color: #282828;
+    transition: height 0.25s;
+    box-shadow: none;
+}
+.nav-top ul li{
+    font-size: 1.05em;
+    margin-top: 15px;
+    transition: margin-top 0.25s, font-size 0.25s;
+}
+
+/* ------- Navbar Smartphone ------ */
+
+.s-navbar{
+    display: none;
+}
+@media(max-width: 361px){
+    .navbar{
+        display: none;
+    }
+    .s-navbar{
+        display: inline-block;
+        height: 95px;
+        width: 100%;
+        background-color: #282828;
+        padding: 10px 25px 10px 25px;
+    }
+    .s-navbar .row{
+        display: inline-block;
+    }
+    .s-navbar .navbar-logo {
+        display: inline-block;
+        float: left;
+        color: #FFFFFF;
+        font-size: 2.0em;
+        font-family: 'Dancing Script', cursive;
+    }
+}
+.s-unfold{
+    display: block;
+    height: 51px;
+    width: 51px;
+    padding-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    border: solid 2px #F0F0F0;
+    border-radius: 5px;
+    background-color: #FFB115;
+}
+.s-unfold .unfold-line{
+    display: block;
+    height: 7px;
+    width: 75%;
+    background-color: #F0F0F0;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.s-unfold .unfold-line:first-child{
+}
+.s-unfold .unfold-line:nth-child(2){
+    margin-top: 6px;
+}
+.s-unfold .unfold-line:nth-child(3){
+    margin-top: 6px;
 }
 
 /*--------------------*/
@@ -92,19 +173,20 @@ body {
 
 header {
     display: inline-block;
-    background-color: #2D2D2E;
     width: 100%;
+    background-color: #2D2D2E;
     box-shadow: 0px 7px 14px #999999;
+    padding-top: 77px;
 }
 header .description {
-    padding-right: 20px;
-    margin-top: 150px;
     display: inline-block;
     text-align: right;
+    padding-right: 20px;
+    margin-top: 150px;
 }
 header .description h1 {
     color: #FFFFFF;
-font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     font-size: 3.5em;
 }
@@ -159,6 +241,43 @@ header .photo img {
     margin-bottom: -3px;
 }
 
+/* ------- Header Smartphone ------ */
+
+@media(max-width: 361px){
+    .header {
+        padding-top: 35px;
+    }
+    .header .photo img{
+        display: block;
+        width: 91%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    .header .description{
+        text-align: center;
+        margin-top: 29px;
+        margin-bottom: 37px;
+        padding: 7px;
+    }
+    .header .description .transition-ligne hr{
+        float: none;
+        margin-right: auto;
+        margin-left: auto
+    }
+    .header .description h1{
+        font-size: 3.3em;
+        margin-bottom: 10px;
+        
+    }
+    .header .description .institution{
+        font-size: 1.25em;
+    }
+    .header .description .localisation{
+        font-size: 0.75em;
+    }
+}
+
 /*--------------------*/
 /*		  MAIN	      */
 /*--------------------*/
@@ -168,17 +287,17 @@ header .photo img {
 /*--------------------*/
 
 .section-title h2{
-    text-align: center;
     color:  #2D2D2E;
-    text-transform: uppercase;
     font-size: 2.0em;
     font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
 }
 .section-title h3{
-    text-align: center;
     color:  #626266;
     font-size: 1.1em;
     font-weight: 700;
+    text-align: center;
 }
 .section-title hr{
     width: 100%;
@@ -192,15 +311,23 @@ header .photo img {
 .section-content p {
     color: #656565;
 }
+@media(max-width:361px){
+    .section-title{
+        display: block;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 /*--------------------*/
 /*	    Identité	  */
 /*--------------------*/
 
 .identite {
+    background-color: #FEFEFE;
     padding-top: 100px;
     padding-bottom: 60px;
-    background-color: #FEFEFE;
 }
 .identite .section-content {
     margin-top: 25px;
@@ -212,8 +339,8 @@ header .photo img {
     padding-left: 35px;
 }
 .identite .details h3{
-    font-size: 1.4em;
     color: #2D2D2E;
+    font-size: 1.4em;
     font-weight: 700;
     margin-bottom: 5px;
 }
@@ -225,11 +352,20 @@ header .photo img {
 }
 .identite .details ul li {
     font-size: 1.2em;
-   margin-top: 5px;
+    margin-top: 5px;
 }
 .identite .quote{
     margin-top: 35px;
     max-width: 540px;
+}
+@media(max-width:361px){
+    .identite{
+        padding-top: 77px;
+    }
+    .identite .details {
+        padding: 0 15px 0 15px;
+        text-align: justify;
+    }
 }
 
 /*--------------------*/
@@ -237,39 +373,39 @@ header .photo img {
 /*--------------------*/
 
 .competences {
-    padding-top: 60px;
-    padding-bottom: 100px;
     background-color: #F5F5F5;
     border-top: solid 1px #DADADA;
+    padding-top: 70px;
+    padding-bottom: 100px;
 }
 .competences .section-content {
     margin-top: 25px;
 }
 .competences .comp-container{
     display: inline-block;
+    max-width: 650px;
     background-color: #FEFEFE;
     border: solid 2px #E0E0E0;
     border-radius: 5px;
     padding: 14px;
-    max-width: 650px;
 }
 .competences .comp-container{
     display: inline-block;
+    max-width: 700px;
     background-color: #FEFEFE;
     border: solid 2px #E0E0E0;
     border-radius: 15px;
     padding: 20px 15px 20px 5px;
-    max-width: 700px;
 }
 .competences .comp-container .logiciels{
     display: inline-block;
-    width: 15%;
     float:left;
+    width: 15%;
 }
 .competences .comp-container .details{
     display: inline-block;
-    width: 85%;
     float: left;
+    width: 85%;
 }
 .competences .comp-container .logiciels img{
     display: block;
@@ -320,6 +456,52 @@ header .photo img {
     width: 502px;
     color: #2D2D2E;
 }
+.s-details-title{
+    display: none;
+}
+@media(max-width:361px){
+    .competences .comp-integration .comp-container .s-details-title{
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            width: 264px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+    .competences .comp-graphisme .comp-container .s-details-title{
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            width: 224px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        } 
+    .competences .comp-developpement .comp-container .s-details-title{
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            width: 259px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+    .competences .section-content{
+        margin-top: 0;
+    }
+    .competences .comp-container{
+        padding-left: 0px;
+        padding-right: 15px;
+    }   
+    .competences .comp-container .details{
+        padding-left: 10px;
+        text-align: justify;
+        font-size: 0.95em;
+        width: 85%;
+    }    
+}
+
 
 
 /*--------------------*/
@@ -327,16 +509,16 @@ header .photo img {
 /*--------------------*/
 
 .experiences {
-    padding-top: 60px;
+    padding-top: 70px;
     padding-bottom: 100px;
-    background-color: #282828;
+    background-color: #2E2E2D;
     border-top: solid 1px #DADADA;
 }
 .experiences .section-title h2{
     color:  #FFFFFF;
 }
 .experiences .section-title h3{
-    color:  #a0a0a0;
+    color:  #A0A0A0;
 }
 .experiences .scolarite{
     display: inline-block;
@@ -433,14 +615,34 @@ header .photo img {
     font-size: 0.95em;
     color: #A0A0A0;
 }
+@media(max-width:361px){
+    .experiences .scolarite .scolarite-box{
+        display: inline-block;
+        float: left;
+        position: relative;
+        height: 180px;
+        width: 180px;
+        background-color: #FEFEFE;
+        border: solid 7px #E0E0E0;
+        border-radius: 50%;
+        padding: 40px 0 0 0;
+        text-align: center;
+        margin-left: calc((100% - 540px) / 2);
+        z-index: 2;
+    }
+}
 
 /*--------------------*/
 /*	  Réalisations	  */
 /*--------------------*/
-.realisations .section-title {
-    padding-top: 60px;
+.realisations {
+    padding-top: 70px;
+    padding-bottom: 100px;
     padding-bottom: 15px;
     background-color: #FEFEFE;
+}
+.realisations .section-title {
+    margin-bottom: 5px;
 }
 .items-portfolio-row {
     margin-top: 15px;
@@ -511,7 +713,7 @@ header .photo img {
     transition: height 0.25s, width 0.25s, opacity 0.25s, visibility 0.25s;
 }
 #portitem1 {
-    background-image: url("img/item1.png");
+    /*background-image: url("img/item1.png");*/
     background-color: gold;
 }
 #portitem2 {
@@ -596,9 +798,90 @@ header .photo img {
 }
 
 /*--------------------*/
+/*	    Contact 	  */
+/*--------------------*/
+
+.contact {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+    background-color: #F5F5F5;
+    border-top: solid 1px #DADADA;
+}
+.contact .section-content {
+    padding-top: 50px;
+}
+.contact .form-identification {
+    padding: 0px 20px;
+}
+.contact .form-message{
+    padding: 0px 20px;  
+}
+.contact .form-identification input {
+    width: 100%;
+    padding: 15px;
+    border: solid 2px #E0E0E0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1.0em;
+    margin-top: 30px;
+}
+.contact .form-identification input:first-child {
+    margin-top: 0;
+}
+.contact .form-message textarea {
+    width: 100%;
+    height: 220px;
+    padding: 15px;
+    border: solid 2px #E0E0E0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1.0em;
+}
+.contact .form-send {
+    margin-top: 35px;
+}
+.contact .form-send input {
+    display: block;
+    background-color: #FFB515;;
+    padding: 10px 40px;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1.0em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.contact .form-send input:hover{
+   background-color: #FFC64B;
+    transition: background-color 0.25s;
+}
+
+
+/*--------------------*/
 /*		 FOOTER	      */
 /*--------------------*/
 footer {
     background-color: #282828;
     height: 150px;
+}
+footer .copyright{
+    display: inline-block;
+    width: 100%;
+    margin-top: 115px;
+    text-align: center;
+    color: #E0E0E0;
+    font-size: 0.95em;
+}
+footer .copyright a{
+    color: #E0E0E0;
+    transition: color 0.25s;
+}
+footer .copyright a:hover{
+    color: #BDBDBD;
+    transition: color 0.25s;
 }

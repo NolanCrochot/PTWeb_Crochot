@@ -13,32 +13,41 @@
 	<!--       NAVIGATION        -->
 	<!----------------------------->
 	
-	<nav class="navbar fixed-navbar">
+	<nav class="navbar nav-top fixed-navbar">
     <div class="wrapper wrapper-navbar">
         <div class="row">
             <div class="navbar-logo">
-                <img/><span class="">NC</span>
+                <img/><span class="">nc</span>
             </div>
             <ul>
-                <li><a href="#identite" class="actual-section">Identité</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#realisations">Réalisations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#identite" class="nav-identite actual-section">Identité</a></li>
+                <li><a href="#competences" class="nav-competences">Compétences</a></li>
+                <li><a href="#experiences" class="nav-experiences">Expériences</a></li>
+                <li><a href="#realisations" class="nav-realisations">Réalisations</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
             </ul>
         </div>
     </div>
+	</nav>
+	<nav class="s-navbar">
+        <div class="row">
+            <div class="s-unfold" id="unfold">
+                <div class="unfold-line"></div>
+                <div class="unfold-line"></div>
+                <div class="unfold-line"></div>
+            </div>
+        </div>
 	</nav>
 	
 	<!----------------------------->
 	<!--         HEADER          -->
 	<!----------------------------->
 	
-	<header>
+	<header class="header" id="header">
     <div class="wrapper wrapper-header">
         <div class="row">
            <div class="center-vertical">
-                <div class="col3 description">
+                <div class="col3 cols6 description">
                     <h1>Nolan Crochot</h1>
                     <div class="localisation">
                         <img src="images/icon_localisation.png">
@@ -57,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col3 photo sm-screen-hidden">
+            <div class="col3 cols6 photo">
                 <img src="./images/silouhette.png" />
             </div>
         </div>
@@ -73,7 +82,7 @@
     <!----------------------------->
     <!--        Identité         -->
     <!----------------------------->
-    <div class="section identite">
+    <div class="section identite" id="identite">
         <div class="wrapper wrapper-identite">
             <div class="row section-title">
                 <h2>Identité</h2>
@@ -81,10 +90,10 @@
                 <h3>Lorem ipsum integer luctus aliquam odio, eget mollis lectus.</h3>
             </div>
             <div class="row section-content">
-                <div class="col2 photo">
+                <div class="col2 sm-screen-hidden photo">
                     <img src="./images/silouhette_small1.png"/>
                 </div>
-                <div class="col4 details">
+                <div class="col4 cols6 details">
                     <h3>Lorem ipsum integer luctus aliquam odio.</h3>
                     <p>Duis placerat rutrum dui, quis pharetra enim ornare eu. Integer porta felis sed quam 
 pulvinar lacinia.  In hac habitasse platea dictumst.</p>
@@ -103,7 +112,7 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
     <!----------------------------->
     <!--       Compétences       -->
     <!----------------------------->
-    <div class="section competences">
+    <div class="section competences" id="competences">
         <div class="wrapper wrapper-competences">
             <div class="row section-title">
                 <h2>Compétences</h2>
@@ -112,18 +121,19 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
             </div>
             <!-- Compétences intégration --> 
             <div class="row section-content comp-integration">
-                <div class="comp-progressbar col1-5">
-                    <canvas class="progressbar animate" id="progressbar-int" width="190" height="190"></canvas>
+                <div class="comp-progressbar col1-5 cols6">
+                    <canvas class="progressbar animate sm-screen-hidden" id="progressbar-int" width="190" height="190"></canvas>
                 </div>
-                <div class="col4-5">
+                <div class="col4-5 cols6">
                     <div class="comp-container">
+                        <h4 class="s-details-title">Intégration web (HTML / CSS / JS)</h4>
                         <div class="logiciels">
                         <img src="images/icones/icon_html.png" />
                         <img src="images/icones/icon_css.png" />
                         <img src="images/icones/icon_js.png" />
                         </div>
                         <div class="details">
-                            <h4>Intégration web (HTML / CSS / JS)</h4>
+                            <h4 class="sm-screen-hidden">Intégration web (HTML / CSS / JS)</h4>
                             <p>Maecenas fermentum sem pretium blandit pulvinar. Proin mauris leo, elementum vel augue et, elementum viverra ligula. Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.
                             </p>
                             <p class="quote">Maecenas fermentum sem pretium blandit pulvinar.</p>
@@ -133,16 +143,17 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
             </div>
             <!-- Compétences developpement --> 
             <div class="row section-content comp-developpement">
-                <div class="comp-progressbar col1-5">
-                    <canvas class="progressbar animate" id="progressbar-dev" width="190" height="190"></canvas>
+                <div class="comp-progressbar col1-5 cols6">
+                    <canvas class="progressbar animate sm-screen-hidden" id="progressbar-dev" width="190" height="190"></canvas>
                 </div>
-                <div class="col4-5">
+                <div class="col4-5 cols6">
                     <div class="comp-container">
+                        <h4 class="s-details-title">Développement web (PHP / SQL)</h4>
                         <div class="logiciels">
                             <img src="images/icones/icon_php.png" />
                         </div>
                         <div class="details">
-                            <h4>Développement web et gestion de bases  (PHP / SQL)</h4>
+                            <h4 class="sm-screen-hidden">Développement web et gestion de bases  (PHP / SQL)</h4>
                             <p>Maecenas fermentum sem pretium blandit pulvinar. Proin mauris leo, elementum vel augue et, elementum viverra ligula. Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.
                             </p>
                             <p class="quote">Maecenas fermentum sem pretium blandit pulvinar.</p>
@@ -152,17 +163,18 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
             </div>
             <!-- Compétences developpement --> 
             <div class="row section-content comp-graphisme">
-                <div class="comp-progressbar col1-5">
-                    <canvas class="progressbar animate" id="progressbar-gra" width="190" height="190"></canvas>
+                <div class="comp-progressbar col1-5 cols6">
+                    <canvas class="progressbar animate sm-screen-hidden" id="progressbar-gra" width="190" height="190"></canvas>
                 </div>
-                <div class="col4-5">
+                <div class="col4-5 cols6">
                     <div class="comp-container">
+                        <h4 class="s-details-title">Infographisme (Ps / Ai / CSS)</h4>
                         <div class="logiciels">
                             <img src="images/icones/icon_ps.png" />
                             <img src="images/icones/icon_ai.png" />
                         </div>
                         <div class="details">
-                            <h4>Infographisme et design (Photoshop / Illustrator / CSS)</h4>
+                            <h4 class="sm-screen-hidden">Infographisme et design (Photoshop / Illustrator / CSS)</h4>
                             <p>Maecenas fermentum sem pretium blandit pulvinar. Proin mauris leo, elementum vel augue et, elementum viverra ligula. Sed posuere aliquam sapien hendrerit blandit. Mauris dictum risus eget odio consequat aliquet.
                             </p>
                             <p class="quote">Maecenas fermentum sem pretium blandit pulvinar.</p>
@@ -176,7 +188,7 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
     <!----------------------------->
     <!--       Expériences       -->
     <!----------------------------->
-    <div class="section experiences">
+    <div class="section experiences" id="experiences">
         <div class="wrapper wrapper-experiences">
             <div class="row section-title">
                 <h2>Expériences & Formations</h2>
@@ -238,20 +250,18 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
     <!----------------------------->
     <!--       Réalisation       -->
     <!----------------------------->
-    <div class="section realisations">
+    <div class="section realisations" id="realisations">
         <div class="wrapper wrapper-realisations">
             <div class="row section-title">
                 <h2>Réalisations</h2>
                 <hr />
                 <h3>Lorem ipsum integer luctus aliquam odio, eget mollis lectus.</h3>
             </div>
-			
-			<div class="row section-content realisations">
-			
+			<div class="row section-content section-row-realisations">
 				<div class="portfolio">
 				    <div class="portfolio-row categories-portfolio-row">
                             <ul class="category-list">
-                                <li class="cat-all">Tout</li>
+                                <li class="cat-all cat-selected">Tout</li>
                                 <li class="cat-web">Intégration</li>
                                 <li class="cat-gra">Graphisme</li>
                                 <li class="cat-dev">Développement</li>
@@ -323,15 +333,40 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
 								 </div>
 							</div>
 						</div>
-						
 					</div>
-					
 				</div>
-				
 			</div>
         </div>
     </div>   
+
+    <!----------------------------->
+    <!--         Contact         -->
+    <!----------------------------->
     
+    <div class="section contact" id="contact">
+        <div class="wrapper wrapper-contact">
+            <div class="row section-title">
+                <h2>Contact</h2>
+                <hr />
+                <h3>Lorem ipsum integer luctus aliquam odio, eget mollis lectus.</h3>
+            </div>
+            <div class="row section-content section-row-contact">
+                <form class="contact-form" id='contactform'>  
+                    <div class="col2-5 cols6 form-identification">
+                        <input type="text" name="nom" placeholder="Votre nom"/>
+                        <input type="email" name="nom" placeholder="Votre adresse de messagerie"/> 
+                        <input type="text" name="nom" placeholder="Objet"/> 
+                    </div>
+                    <div class="col3-5 cols6 form-message">
+                        <textarea name="message" placeholder="Votre message"></textarea>
+                    </div> 
+                    <div class="col6 form-send">
+                        <input class="btn-submit" type="submit" value="Envoyer"/> 
+                    </div>
+                </form>    
+            </div>
+        </div>
+    </div>    
 	</main>
 	
 	<!----------------------------->
@@ -339,7 +374,9 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
 	<!----------------------------->
 	
 	<footer>
-		
+	    <div class="copyright">
+		    <p>Crochot Nolan © copyright 2016 - <a href="">mentions légales</a> - <a href="">mes relations</a></p>
+		</div>
 	</footer>
 
 	<!----------------------------->
@@ -347,10 +384,13 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
 	<!----------------------------->
     
 	<script language="JavaScript" type="text/javascript" src="./js/jquery-3.0.0.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./js/portfolio.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/jquery.waypoints.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/jquery.viewport.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./js/navbar.js"></script>
     <script language="JavaScript" type="text/javascript" src="./js/circular_progress_bar_int.js"></script>
     <script language="JavaScript" type="text/javascript" src="./js/circular_progress_bar_dev.js"></script>	
     <script language="JavaScript" type="text/javascript" src="./js/circular_progress_bar_gra.js"></script>
-	<script language="JavaScript" type="text/javascript" src="./js/portfolio.js"></script>
 
 	
 </body>
