@@ -121,10 +121,10 @@ body {
     }
     .s-navbar{
         display: inline-block;
-        height: 95px;
+        height: auto;
         width: 100%;
         background-color: #282828;
-        padding: 10px 25px 10px 25px;
+        padding: 10px 0 0px 0;
     }
     .s-navbar .row{
         display: inline-block;
@@ -136,6 +136,45 @@ body {
         font-size: 2.0em;
         font-family: 'Dancing Script', cursive;
     }
+    .s-menu {
+        display: none; 
+    }
+    .s-menu-open {
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        transition: height 1.0s;
+        
+    }
+    .s-menu-open ul li a{
+        font-size: 0em;
+        transition: font-size 0.25s;
+    }
+    .s-menu-opacity {
+        height: auto;
+        transition: height 1.0s;
+        
+    }
+    .s-menu-opacity ul li a{
+        font-size: 1.2em !important;
+        transition: font-size 0.25s;
+        text-transform: uppercase;
+    }
+    .s-menu li{
+        text-align: center;
+        background-color: #313131;
+        border-bottom: solid 2px #292929;
+        padding: 10px 0 10px 0;
+        list-style-type: none;
+    }
+    .s-menu li:first-child{
+        border-top: solid 2px #282828;
+    }
+    .s-menu li a{
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: 500;
+    }
 }
 .s-unfold{
     display: block;
@@ -145,9 +184,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 11px;
+    margin-bottom: 10px;
     border: solid 2px #F0F0F0;
     border-radius: 5px;
     background-color: #FFB115;
+    cursor: pointer;
 }
 .s-unfold .unfold-line{
     display: block;
@@ -165,6 +206,47 @@ body {
 }
 .s-unfold .unfold-line:nth-child(3){
     margin-top: 6px;
+}
+/* ------- Button back to the top ------ */
+
+.backtotop {
+    display: none;
+}
+@media(max-width: 361px){
+    .backtotop {
+        display: block;
+        position: absolute;
+        height: 51px;
+        width: 51px;
+        padding-top: 7px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 11px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: rgba(255, 177, 21, 0.7);
+        cursor: pointer;
+        position: fixed;
+        right: 15px;
+        bottom: 5px;
+        z-index: 100;
+        opacity: 1;
+        transition: opacity 0.25s;
+    }
+    .backtotop a{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-top: -7px;
+        color: #F0F0F0;
+        font-size: 3.4em;
+        font-weight: 900;
+        text-decoration: none;
+    }
+    .backtotop-already-top{
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
 }
 
 /*--------------------*/
@@ -311,6 +393,9 @@ header .photo img {
 .section-content p {
     color: #656565;
 }
+
+/* ------- Section Smartphone ------ */
+
 @media(max-width:361px){
     .section-title{
         display: block;
@@ -358,6 +443,9 @@ header .photo img {
     margin-top: 35px;
     max-width: 540px;
 }
+
+/* ------- Identité Smartphone ------ */
+
 @media(max-width:361px){
     .identite{
         padding-top: 77px;
@@ -459,6 +547,9 @@ header .photo img {
 .s-details-title{
     display: none;
 }
+
+/* ------- Compétences Smartphone ------ */
+
 @media(max-width:361px){
     .competences .comp-integration .comp-container .s-details-title{
             display: block;
@@ -501,8 +592,6 @@ header .photo img {
         width: 85%;
     }    
 }
-
-
 
 /*--------------------*/
 /*	  Expériences	  */
@@ -615,26 +704,55 @@ header .photo img {
     font-size: 0.95em;
     color: #A0A0A0;
 }
+
+/* ------- Expériences Smartphone ------ */
+
 @media(max-width:361px){
-    .experiences .scolarite .scolarite-box{
+    .experiences .section-content {
+        margin-top: 15px;
+    }
+    .experiences .scolarite {
+        margin-bottom: 0;
+    }
+    .experiences .scolarite .special-row{
         display: inline-block;
-        float: left;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+    .experiences .scolarite .scolarite-box{
+        display: block;
         position: relative;
-        height: 180px;
-        width: 180px;
-        background-color: #FEFEFE;
-        border: solid 7px #E0E0E0;
-        border-radius: 50%;
-        padding: 40px 0 0 0;
-        text-align: center;
-        margin-left: calc((100% - 540px) / 2);
-        z-index: 2;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+        float: none;
+    }
+    .experiences .scolarite .scolarite-box:first-child{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .experiences .scolarite .line{
+        width: 7px;
+        margin-left: calc(50% - 3.5px);
+        float: none;
+        height: 400px;
+        background-color: #F0F0F0;
+    }
+    .experiences .professions {
+        padding: 10px;
+        margin-top: 15px;
+    }
+    .experiences .professions ul li{
+        padding: 10px;
+        font-size: 1.0em;  
     }
 }
 
 /*--------------------*/
 /*	  Réalisations	  */
 /*--------------------*/
+
 .realisations {
     padding-top: 70px;
     padding-bottom: 100px;
@@ -797,6 +915,35 @@ header .photo img {
     display: none;
 }
 
+/* ------- Réalisations Smartphone ------ */
+
+@media(max-width:361px){
+    .portfolio .category-list {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .portfolio .category-list li {
+        display: block;
+        width: auto;
+        margin: 0;
+    }
+    .portfolio .category-list .cat-selected {
+        border-bottom: none;
+        text-decoration: underline;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .portfolio .items-portfolio-row{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+    }
+    .portfolio .items-portfolio-row .port-item{
+        margin-bottom: 0px;
+    }
+}
+
 /*--------------------*/
 /*	    Contact 	  */
 /*--------------------*/
@@ -861,10 +1008,27 @@ header .photo img {
     transition: background-color 0.25s;
 }
 
+/* ------- Contact Smartphone ------ */
+
+@media(max-width:361px){
+    .contact .form-identification input{
+        margin-top: 5px;
+    }
+    .contact .form-identification input:first-child{
+        margin-top: 0px;
+    }
+    .contact .form-message{
+        margin-top: 15px;   
+    }
+    .contact .form-send{
+        margin-top: 20px;   
+    }
+}
 
 /*--------------------*/
 /*		 FOOTER	      */
 /*--------------------*/
+
 footer {
     background-color: #282828;
     height: 150px;
@@ -877,11 +1041,30 @@ footer .copyright{
     color: #E0E0E0;
     font-size: 0.95em;
 }
+footer .copyright p{
+    display: inline-block;
+}
 footer .copyright a{
+    display: inline-block;
     color: #E0E0E0;
     transition: color 0.25s;
 }
 footer .copyright a:hover{
     color: #BDBDBD;
     transition: color 0.25s;
+}
+
+/* ------- Footer Smartphone ------ */
+
+@media(max-width:361px){
+    
+   footer .copyright{
+        margin-top: 90px; 
+    }
+    footer .copyright p {
+        display: block;
+    }
+    footer .copyright span {
+        display: none;
+    }
 }

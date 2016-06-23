@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0">
 	<title>Site CV - Nolan Crochot</title>
     <link rel="stylesheet" href="./styles/reset.css">
 	<link rel="stylesheet" href="./styles/grid-format.css">
@@ -13,6 +14,7 @@
 	<!--       NAVIGATION        -->
 	<!----------------------------->
 	
+	<!-- Navigation PC et tablette -->
 	<nav class="navbar nav-top fixed-navbar">
     <div class="wrapper wrapper-navbar">
         <div class="row">
@@ -29,7 +31,8 @@
         </div>
     </div>
 	</nav>
-	<nav class="s-navbar">
+	<!-- Navigation smartphone -->
+	<nav class="s-navbar" id="snavbar">
         <div class="row">
             <div class="s-unfold" id="unfold">
                 <div class="unfold-line"></div>
@@ -37,7 +40,20 @@
                 <div class="unfold-line"></div>
             </div>
         </div>
+        <div class="s-menu" id="smenu">
+            <ul>
+                <li><a href="#identite" class="nav-identite actual-section">Identité</a></li>
+                <li><a href="#competences" class="nav-competences">Compétences</a></li>
+                <li><a href="#experiences" class="nav-experiences">Expériences</a></li>
+                <li><a href="#realisations" class="nav-realisations">Réalisations</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
 	</nav>
+	<!-- Bouton "Back to the top" smartphone -->
+	<div class="backtotop backtotop-already-top">
+	    <a href="#snavbar">^</a>
+	</div>
 	
 	<!----------------------------->
 	<!--         HEADER          -->
@@ -354,8 +370,8 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
                 <form class="contact-form" id='contactform'>  
                     <div class="col2-5 cols6 form-identification">
                         <input type="text" name="nom" placeholder="Votre nom"/>
-                        <input type="email" name="nom" placeholder="Votre adresse de messagerie"/> 
-                        <input type="text" name="nom" placeholder="Objet"/> 
+                        <input type="email" name="email" placeholder="Votre adresse de messagerie"/> 
+                        <input type="text" name="objet" placeholder="Objet"/> 
                     </div>
                     <div class="col3-5 cols6 form-message">
                         <textarea name="message" placeholder="Votre message"></textarea>
@@ -366,7 +382,8 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
                 </form>    
             </div>
         </div>
-    </div>    
+    </div>
+      
 	</main>
 	
 	<!----------------------------->
@@ -375,7 +392,7 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
 	
 	<footer>
 	    <div class="copyright">
-		    <p>Crochot Nolan © copyright 2016 - <a href="">mentions légales</a> - <a href="">mes relations</a></p>
+            <p>Crochot Nolan © copyright 2016</p><span class="line-transition"> - </span><a href="">mentions légales</a> - <a href="">mes relations</a>
 		</div>
 	</footer>
 
@@ -383,15 +400,20 @@ pulvinar lacinia.  In hac habitasse platea dictumst.</p>
 	<!--         SCRIPTS         -->
 	<!----------------------------->
     
-	<script language="JavaScript" type="text/javascript" src="./js/jquery-3.0.0.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="./js/portfolio.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/jquery.waypoints.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/jquery.viewport.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="./js/navbar.js"></script>
-    <script language="JavaScript" type="text/javascript" src="./js/circular_progress_bar_int.js"></script>
-    <script language="JavaScript" type="text/javascript" src="./js/circular_progress_bar_dev.js"></script>	
-    <script language="JavaScript" type="text/javascript" src="./js/circular_progress_bar_gra.js"></script>
-
+    <!-- Librairie Jquery et plugins -->
+	<script src="./js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Script du portfolio -->
+	<script src="./js/portfolio.js"></script>
+    <!-- Barre de navigation, navigation smartphone, et leur transition fluide -->
+    <script src="./js/navbar.js"></script>
+    <script src="./js/snavbar.js"></script>
+    <script src="./js/smooth_scroll_anchor.js"></script>
+    <script src="./js/back_to_the_top.js"></script>
+    <!-- Barres de progression circulaires (section compétences) -->
+    <script src="./js/circular_progress_bar_int.js"></script>
+    <script src="./js/circular_progress_bar_dev.js"></script>	
+    <script src="./js/circular_progress_bar_gra.js"></script>
 	
 </body>
 </html>

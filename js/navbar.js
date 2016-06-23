@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   
     /*DOWN SCROLL*/
+    /* Définir le surlignage des sections quand l'utilisateur descend sur la page */ 
     
     var waypoint = new Waypoint({
       element: document.getElementById('identite'),
@@ -60,6 +61,7 @@ $( document ).ready(function() {
     
     
     /* UP SCROLL */
+    /* Définir le surlignage des sections quand l'utilisateur remonte la page */ 
     
     var waypoint = new Waypoint({
       element: document.getElementById('identite'),
@@ -118,7 +120,8 @@ $( document ).ready(function() {
     })
     
     
-    /* HEADER */
+    /* CHANGEMENT DE BARRE */
+    /* Cas particuliers pour l'en-tête (haut de page) */ 
     
     var waypoint = new Waypoint({
       element: document.getElementById('header'),
@@ -141,6 +144,7 @@ $( document ).ready(function() {
     })  
 
     /* CONTACT */
+    /* Cas particuliers pour la section contact (bas de page) */
     
     var waypoint = new Waypoint({
       element: document.getElementById('contact'),

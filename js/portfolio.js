@@ -18,7 +18,7 @@ $( document ).ready(function() {
             $( '.itemgra' ).removeClass( "portitem-transition" ); 
             $( '.itemweb' ).removeClass( "portitem-transition" );
             $( '.itemdev' ).removeClass( "portitem-transition" );
-        }, 250);
+        }, 100);
     });
     $( '.cat-web' ).click(function() {
         $( '.itemweb' ).removeClass( "portitem-hiden" );
@@ -32,7 +32,7 @@ $( document ).ready(function() {
             $( '.itemgra' ).addClass( "portitem-hiden" ); 
             $( '.itemdev' ).addClass( "portitem-hiden" ); 
             $( '.itemweb' ).removeClass( "portitem-transition" );
-        }, 250);
+        }, 100);
     });
     $( '.cat-gra' ).click(function() {
         $( '.itemweb' ).addClass( "portitem-transition" );
@@ -46,7 +46,7 @@ $( document ).ready(function() {
             $( '.itemweb' ).addClass( "portitem-hiden" );  
             $( '.itemdev' ).addClass( "portitem-hiden" ); 
             $( '.itemgra' ).removeClass( "portitem-transition" );
-        }, 250);
+        }, 100);
     });
     $( '.cat-dev' ).click(function() {
         $( '.itemweb' ).addClass( "portitem-transition" );
@@ -60,7 +60,7 @@ $( document ).ready(function() {
             $( '.itemweb' ).addClass( "portitem-hiden" ); 
             $( '.itemgra' ).addClass( "portitem-hiden" ); 
             $( '.itemdev' ).removeClass( "portitem-transition" );
-        }, 250);
+        }, 100);
     });
     
 });
