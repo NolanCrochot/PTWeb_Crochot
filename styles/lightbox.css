@@ -1,0 +1,127 @@
+/*--------------------*/
+/*		 IMPORT	      */
+/*--------------------*/
+
+/* Fonts (fourni par Google Fonts) */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,400italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+
+/*--------------------*/
+/*   GENERAL STYLES	  */
+/*--------------------*/
+
+.open-box-btn {
+    display: inline-block;
+    color: #A1A1A1;
+    border: solid 1px #E1E1E1;
+    background-color: #F7F7F7;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.item-visible{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: visibility 0.25s, opacity 0.25s;
+}
+.item-hidden{
+    display: none !important;
+}
+.lightbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 150;
+}
+.lightbox-open {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s, opacity 0.25s;
+}
+.lightbox-content {
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    width: 80%;
+    max-height: 90vh;
+    max-width: 950px;
+    margin-top: 5vh;
+    margin-left: 10%;
+    background-color: #1C1C1C;
+    border-radius: 7px;
+    transition: visibility 0.25s, opacity 0.25s;
+    overflow: auto;
+}
+@media(min-width:950px){
+    .lightbox-content{
+        margin-left: calc((100% - 950px) / 2);
+    }
+}
+.lightbox-content .previous {
+    position: absolute;
+    display: block;
+    width: 44px;
+    height: 56px;
+    top: calc(50% - (56px / 2));
+    left: 11px;
+    cursor: pointer;
+    background-image: url(../images/icones_lightbox/icon_previous.png);
+    opacity: 0.7;
+}
+.lightbox-content .next {
+    position: absolute;
+    display: block;
+    width: 44px;
+    height: 56px;
+    top: calc(50% - (56px / 2));
+    right: 11px;
+    cursor: pointer;
+    background-image: url(../images/icones_lightbox/icon_next.png);
+    opacity: 0.7;
+}
+.end-item-get{
+    opacity: 0.15 !important; 
+    cursor: default !important;
+}
+.lightbox-content .content{
+    display: block;
+    max-height: 80vh;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+}
+.lightbox-content .content img{
+    display: block;
+    height: auto;
+    max-height: inherit;
+    width: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: visibility 0.25s, opacity 0.25s;
+}
+.close-box-btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.75;
+    background-image: url(../images/icones_lightbox/icon_close.png);
+    transition: opacity 0.25s;
+}
+.close-box-btn:hover{
+    opacity: 0.75;
+    transition: opacity 0.25s;
+
+}

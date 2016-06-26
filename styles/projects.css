@@ -1,0 +1,88 @@
+/*--------------------*/
+/*   GENERAL STYLES	  */
+/*--------------------*/
+
+/*--------------------*/
+/*       HEADER  	  */
+/*--------------------*/
+
+header{
+    background-color: none;
+    height: 170px;
+    padding: 0;
+    font-family: 'Lato', cursive;
+}
+header .row-title .title {
+    margin-top: 85px;
+    color: #FFFFFF;
+    font-size: 1.9em;
+    font-weight: 500;
+}
+header .row-title h2 {
+    margin-top: 0px;
+    color: #A0A0A0;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/*--------------------*/
+/*      PROJECTS   	  */
+/*--------------------*/
+
+/*--------------------*/
+/*       PAGES        */
+/*--------------------*/
+
+.row{
+    padding: 0px 15px;
+}
+.row-section-title{
+    text-align: center;
+}
+.row .row-title {
+    display: inline-block;
+    color:  #2D2D2E;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: solid 2px #FFB515;
+    margin-bottom: 15px; 
+}
+
+/*--------------------*/
+/*      Etchever   	  */
+/*--------------------*/
+
+.etchever .charte {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.etchever .charte .description {
+    text-align: center;
+}
+.etchever .charte p {
+   color: #474747;
+}
+
+.etchever .charte .charte-images, .etchever .maquette .charte-images {
+    padding: 5px;
+    margin-top: 35px;
+}
+
+.etchever .charte .charte-images img, .etchever .maquette .charte-images img{
+    width: 100%;
+    box-shadow: 0px 4px 5px rgba(0,0,0,0.3);
+}
+.etchever .charte .description .mention{
+    color: #7E7E7E;
+    font-size: 0.9em;
+}
+.etchever .charte .description .mention-entreprise {
+    margin-top: 5px;
+}
+.etchever .charte .description .mention-image {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+

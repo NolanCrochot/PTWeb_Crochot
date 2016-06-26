@@ -1,0 +1,87 @@
+/*--------------------*/
+/*   GENERAL STYLES	  */
+/*--------------------*/
+
+/*--------------------*/
+/*       HEADER  	  */
+/*--------------------*/
+
+header{
+    background-color: none;
+    height: 170px;
+    padding: 0;
+    font-family: 'Lato', cursive;
+}
+header .row-title .title {
+    margin-top: 85px;
+    color: #FFFFFF;
+    font-size: 1.9em;
+    font-weight: 500;
+}
+header .row-title h2 {
+    margin-top: 0px;
+    color: #A0A0A0;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/*--------------------*/
+/*        MAIN   	  */
+/*--------------------*/
+
+/*--------------------*/
+/*      section   	  */
+/*--------------------*/
+
+.row{
+    padding: 0px 15px;
+}
+
+/*--------------------*/
+/*      mentions   	  */
+/*--------------------*/
+.mention {
+    /*Forcer le footer à être placé en bas de page*/
+    min-height: calc(100% - 170px - 150px);
+    text-align: center;
+}
+.mention h3{
+    display: inline-block;
+    color:  #2D2D2E;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: solid 2px #FFB515;
+    margin-bottom: 15px;
+}
+
+.row-edition {
+    padding-top: 75px;
+    padding-bottom: 35px;
+}
+.row-publication {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-top: solid 1px #E0E0E0;
+    border-bottom: solid 1px #E0E0E0;
+}
+.row-hebergement {
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+.mention a{
+    color: #738AA1;
+    text-decoration: none;
+}
+.mention p {
+    color: #282828;
+}
+.mention .nom {
+    font-weight: 700;
+    color: #4C4C4C;
+}
+
+/*--------------------*/
+/*      footer   	  */
+/*--------------------*/
