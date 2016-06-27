@@ -11,6 +11,27 @@
 </head>
 <body>
 
+	<?php
+		// Reception des variables pour l'email
+		$nom 			= isset($_POST['nom']) ? $_POST['nom'] : NULL ;
+		$expediteur 	= isset($_POST['expediteur']) ? $_POST['expediteur'] : NULL ;
+		$objet 			= isset($_POST['objet']) ? $_POST['objet'] : 'Sans Objet' ;
+		$message 		= isset($_POST['message']) ? $_POST['message'] : NULL ;
+		$to				= 'crochot.nolan@gmail.com';
+
+		// Traitement 
+		if ($nom && $objet && $expediteur && $message){
+			$nom = addslashes($nom);
+			$objet = addslashes($objet);
+			$message = addslashes($message);
+			$message.=' - De '.$nom.' - Email : '.$expediteur;
+			mail($to, $objet, $message);
+		}
+		else {
+			$email_error = '<br />Merci de remplir tous les champs.';
+		}
+	?>
+
 	<!----------------------------->
 	<!--       NAVIGATION        -->
 	<!----------------------------->
@@ -92,7 +113,7 @@
 	
 	<!----------------------------->
 	<!--         CONTENU         -->
-	<!----------------------------->
+	<!----------------------------->	
 	
 	<main>
 
@@ -112,7 +133,7 @@
                 </div>
                 <div class="col4 cols6 details">
                     <h3>Quelle personnalité ?</h3>
-                    <p>Passioné par le domaine Web, je m'applique dans l'intégration, le développement, et même le design qui comble notre matière ergonomique. Toujours curieux d'apprendre et de pratiquer, j'aime fournir un grand investissement dans les projets qui sauraient m'ouvrir à de nouvelles techniques du Web.</p>
+                    <p>Passionné par le domaine Web, je m'applique dans l'intégration, le développement, et même le design qui comble notre matière ergonomique. Toujours curieux d'apprendre et de pratiquer, j'aime fournir un grand investissement dans les projets qui sauraient m'ouvrir à de nouvelles techniques du Web.</p>
                    <ul class="characteristics">
                        <li>Dynamique</li>
                        <li>Entreprenant</li>
@@ -304,7 +325,7 @@
 									<h3>Il Cortile (fictif)</h3>
 									<span>Un site conçu depuis le CMS Wordpress dans le cadre d'un projet scolaire. Ce site n'est pas le site officiel du restaurant et ne fait l'objet d'aucun acte commercial.</span><br />
 									<span class="info">cliquez pour voir plus</span>
-									<a class="button-readmore" href=""></a>
+									<a class="button-readmore" href="https://tp.iha.unistra.fr/projets/mmi1/ptcomg25/PTcom/wordpress/fr/"></a>
 								 </div>
 							</div>
 						</div>
@@ -314,7 +335,7 @@
 									<h3>Mon CV interactif</h3>
 									<span>C'est le site sur lequel vous vous trouvez actuellement ! Entièrement codé main, mettant en oeuvre de l'HTML, du CSS et du Javascript.</span>
 									<span class="info">cliquez pour voir plus</span>
-									<a class="button-readmore" href=""></a>
+									<a class="button-readmore" href="index.php"></a>
 								 </div>
 							</div>
 						</div>
@@ -324,7 +345,7 @@
 									<h3>Interface d'une bibliothèque</h3>
 									<span>Une interface conçue pour différents groupes d'utilisateurs, avec différentes permissions, dans le cadre d'un projet scolaire.</span>
 									<span class="info">cliquez pour voir plus</span>
-									<a class="button-readmore" href=""></a>
+									<a class="button-readmore" href="https://tp.iha.unistra.fr/~crochot/info/fetsch/TP3/index.php"></a>
 								 </div>
 							</div>
 						</div>
@@ -334,15 +355,7 @@
 									<h3>Contenu graphique Stellios - YT</h3>
 									<span>La création d'un logo, de nombreuses miniatures et de quelques bannières pour la chaine Youtube d'un vidéaste.</span>
 									<span class="info">cliquez pour voir plus</span>
-									<a class="button-readmore" href=""></a>
-								 </div>
-							</div>
-						</div>
-						<div class="item-align port-item itemweb" id="portitem5">
-							<div>
-								 <div class="description">
-									<h3>Element Web 3</h3>
-									<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet porttitor odio.</span>
+									<a class="button-readmore" href="https://www.youtube.com/user/stribiliounou"></a>
 								 </div>
 							</div>
 						</div>
@@ -366,11 +379,12 @@
 								 </div>
 							</div>
 						</div>
-						<div class="item-align port-item itemdev" id="portitem8">
+						<div class="item-align port-item itemweb" id="portitem8">
 							<div>
 								 <div class="description">
-									<h3>Element Dev 2</h3>
-									<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet porttitor odio.</span>
+									<h3>Site Teguluxe V.2.0</h3>
+									<span>Un site pour l'entreprise Teguluxe - FRANCE. Actuellement une nouvelle version est en cours de réalisation.</span>
+									<span class="info">Le lien n'est pas encore disponible</span>
 								 </div>
 							</div>
 						</div>
@@ -409,23 +423,27 @@
                 <h3>Me contacter par message</h3>
             </div>
             <div class="row section-content section-row-contact">
-                <form class="contact-form" id='contactform'>  
+                <form class="contact-form" id='contactform' action="index.php#contact" method="post">  
                     <div class="col2-5 cols6 form-identification">
                         <input type="text" name="nom" placeholder="Votre nom"/>
-                        <input type="email" name="email" placeholder="Votre adresse de messagerie"/> 
+                        <input type="email" name="expediteur" placeholder="Votre adresse de messagerie"/> 
                         <input type="text" name="objet" placeholder="Objet"/> 
                     </div>
                     <div class="col3-5 cols6 form-message">
                         <textarea name="message" placeholder="Votre message"></textarea>
                     </div> 
                     <div class="col6 form-send">
-                        <input class="btn-submit" type="submit" value="Envoyer"/> 
+                        <input class="btn-submit" type="submit" value="Envoyer"/>
                     </div>
+					<?php/*
+						if (isset($email_error) && $email_error)
+							echo '<div class="col6" style="text-align: center;"><p>'.$email_error.'</p></div>';
+					*/?>
                 </form>    
             </div>
         </div>
     </div>
-      
+	
 	</main>
 	
 	<!----------------------------->
@@ -434,7 +452,7 @@
 	
 	<footer>
 	    <div class="copyright">
-            <p>Nolan Crochot © copyright 2016</p><span class="line-transition"> - </span><a href="./pages/mentions_legales.html">mentions légales</a> - <a href="">mes relations</a>
+            <p>Nolan Crochot © copyright 2016</p><span class="line-transition"> - </span><a href="./pages/mentions_legales.html">mentions légales</a>
 		</div>
 	</footer>
 
